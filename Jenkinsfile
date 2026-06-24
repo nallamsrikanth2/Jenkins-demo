@@ -59,4 +59,15 @@ pipeline {
             }
         }
     }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+        sucess {
+            echo "I will run when pipeline is sucess"
+        }
+        failure {
+            echo " i will when pipeline is failure"
+        }
+    }
 }
