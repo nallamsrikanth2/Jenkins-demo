@@ -7,6 +7,11 @@ pipeline {
         timeout(time: 1, unit: 'MINUTES')
         disableConcurrentBuilds()
     }
+    environment { 
+        DEPLOT_TO = "production"
+        POSITION = " aws devops engineer"
+
+    }
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
@@ -28,6 +33,7 @@ pipeline {
             steps {
                 sh "echo This is Test"
                 sh "sleep 2"
+                sh "env"
             }
         }
         stage('Deploy') {
