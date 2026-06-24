@@ -43,6 +43,7 @@ pipeline {
                 sh "echo triggered github-webook"
                 sh "echo $POSITION"
                 sh "echo $DEPLOY_TO"
+                error "some-message"
             }
         }
         stage('print params') {
