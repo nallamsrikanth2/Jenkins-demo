@@ -33,6 +33,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh "echo This is Deploy"
+                sh "triggered github-webook"
             }
         }
         stage('print params') {
