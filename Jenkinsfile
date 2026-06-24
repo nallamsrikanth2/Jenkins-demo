@@ -34,6 +34,7 @@ pipeline {
                 sh "echo This is Test"
                 sh "sleep 2"
                 sh "env"
+                sh "echo $POSITION"
             }
         }
         stage('Deploy') {
