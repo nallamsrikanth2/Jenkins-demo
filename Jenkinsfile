@@ -8,7 +8,7 @@ pipeline {
         disableConcurrentBuilds()
     }
     environment { 
-        DEPLOT_TO = "production"
+        DEPLOY_TO = "production"
         POSITION = " aws devops engineer"
 
     }
@@ -42,6 +42,7 @@ pipeline {
                 sh "echo This is Deploy"
                 sh "echo triggered github-webook"
                 sh "echo $POSITION"
+                sh "echo $DEPLOY_TO"
             }
         }
         stage('print params') {
