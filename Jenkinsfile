@@ -34,13 +34,14 @@ pipeline {
                 sh "echo This is Test"
                 sh "sleep 2"
                 sh "env"
-                sh "echo $POSITION"
+            
             }
         }
         stage('Deploy') {
             steps {
                 sh "echo This is Deploy"
                 sh "echo triggered github-webook"
+                sh "echo $POSITION"
             }
         }
         stage('print params') {
